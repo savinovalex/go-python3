@@ -1,3 +1,5 @@
+**This fork is a quick hack to make this module work with Python 3.8**
+
 # go-python3
 
 **Currently supports python-3.7 only.**
