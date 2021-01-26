@@ -40,7 +40,7 @@ func PyBytes_FromStringBinary(str string) *PyObject {
 	cstr := C.CString(str)
 	defer C.free(unsafe.Pointer(cstr))
 
-	return togo(C.PyBytes_FromStringAndSize(cstr, C.int(len(str))))
+	return togo(C.PyBytes_FromStringAndSize(cstr, C.long(len(str))))
 }
 
 //PyBytes_FromObject : https://docs.python.org/3/c-api/bytes.html#c.PyBytes_FromObject
