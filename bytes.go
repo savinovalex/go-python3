@@ -36,7 +36,7 @@ func PyBytes_FromString(str string) *PyObject {
 }
 
 //PyBytes_FromString : https://docs.python.org/3/c-api/bytes.html#c.PyBytes_FromStringAndSize
-func PyBytes_FromString(str string) *PyObject {
+func PyBytes_FromStringBinary(str string) *PyObject {
 	cstr := C.CString(str)
 	defer C.free(unsafe.Pointer(cstr))
 
